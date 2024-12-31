@@ -5,11 +5,13 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.Map;
+
 @EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class ObjectRequestData extends RequestData{
 
-    private Object body;
+    private Map<String, Object> body;
 }

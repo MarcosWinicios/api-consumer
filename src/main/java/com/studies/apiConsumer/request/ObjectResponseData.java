@@ -2,15 +2,20 @@ package com.studies.apiConsumer.request;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @EqualsAndHashCode(callSuper = true)
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ObjectResponseData extends ResponseData{
+public class ObjectResponseData extends ResponseData {
 
-    private Object body;
+    private Map<String, Object> body = new HashMap<>();
 }
